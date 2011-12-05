@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 in WebUI</title>
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<link rel="stylesheet" href="deck/core/deck.core.css" type="text/css" />
+	<link rel="stylesheet" href="deck/themes/transition/horizontal-slide.css" type="text/css" />
+	<link rel="stylesheet" href="deck/extensions/hash/deck.hash.css" type="text/css" />
+	<link rel="stylesheet" href="deck/extensions/menu/deck.menu.css" type="text/css" />
+	<link rel="stylesheet" href="deck/extensions/navigation/deck.navigation.css" type="text/css" />
+	<link rel="stylesheet" href="deck/extensions/status/deck.status.css" type="text/css" />
+	<link rel="stylesheet" href="deck/cube.css" type="text/css" />
+	<link rel="stylesheet" href="farbtastic/farbtastic.css" type="text/css" />
+	<link rel="stylesheet" href="index.css" type="text/css" />
+	
+	<script src="deck/modernizr.custom.js"></script>
+</head>
+<body>
+	<header>
+	  <h1>CSS3 in OFSDK WebUI</h1>
+	</header>
+	<div class="outer-container">
+		<article class="deck-container">
+			<section id="title" class="title slide">
+				<h1>
+					CSS3 in OFSDK WebUI
+				</h1>
+				<h3 class="author">Xingkui@OpenFeint</h3>
+			</section>
+			<!--Overview-->
+			<section id="overview" class="slide">
+				<h2>CSS3 features we userd</h2>
+			  <ol>
+			    <li>
+			      <h3>border-radius</h3>
+			    </li>
+			    <li>
+			      <h3>background-size</h3>
+			    </li>
+			    <li>
+			      <h3>background-image: -webkit-gradient</h3>
+			    </li>
+			    <li>
+			    	<h3>border-image</h3>
+			    </li>
+			    <li>
+			    	<h3>box-sizing</h3>
+			    </li>
+			    <li>
+			    	<h3>text shadow</h3>
+			    </li>
+			    <li>
+			    	<h3>display: table(CSS2)</h3>
+			    </li>
+			  </ol>
+			</section>
+			<!--border-radius-->
+			<section id="border_radius" class="slide">
+				<h2>border-radius</h2>
+				<div class="border_radius_preview">
+					<div class="top_border_control">
+						<div class="left_border_control">
+							<div class="border_control">
+								<label>top left border radius x</label><input type="range" id="brtlx" value="0" min="0" max="50" />
+							</div>
+							<div class="border_control">
+								<label>top left border radius y</label><input type="range" id="brtly" value="0" min="0" max="50" />
+							</div>
+						</div>
+						<div class="right_border_control">
+							<div class="border_control">
+								<label>top right border radius x</label><input type="range" id="brtrx" value="0" min="0" max="50" />
+							</div>
+							<div class="border_control">
+								<label>top right border radius y</label><input type="range" id="brtry" value="0" min="0" max="50" />
+							</div>
+						</div>
+					</div>
+					<div class="border_radius_content">
+						<div id="border_radius_sample" class="border_radius_sample">
+							Sample
+						</div>
+					</div>
+					<div class="bottom_border_control">
+						<div class="left_border_control">
+							<div class="border_control">
+								<label>bottom left border radius x</label><input type="range" id="brblx" value="0" min="0" max="50" />
+							</div>
+							<div class="border_control">
+								<label>bottom left border radius y</label><input type="range" id="brbly" value="0" min="0" max="50" />
+							</div>
+						</div>
+						<div class="right_border_control">
+							<div class="border_control">
+								<label>bottom right border radius x</label><input type="range" id="brbrx" value="0" min="0" max="50" />
+							</div>
+							<div class="border_control">
+								<label>bottom right border radius y</label><input type="range" id="brbry" value="0" min="0" max="50" />
+							</div>
+						</div>
+					</div>		
+				</div>
+			</section>
+			<!--background-size-->
+			<section id="background_size" class="slide">
+				<h2>background-size</h2>
+				<div class="background_size_preview">
+					<div class="background_size_images">
+						<div class="background_size_image">
+							<h4>mdpi</h4>
+							<div class="original_container">
+								<img src="resources/leaf.mdpi.png" alt="" />
+							</div>
+							<div class="background_container"></div>
+						</div>
+						<div class="background_size_image">
+							<h4>hdpi</h4>
+							<div class="original_container">
+								<img src="resources/leaf.hdpi.png" alt="" />
+							</div>
+							<div class="background_container"></div>
+						</div>
+						<div class="background_size_image">
+							<h4>udpi</h4>
+							<div class="original_container">
+								<img src="resources/leaf.udpi.png" alt="" />
+							</div>
+							<div class="background_container"></div>
+						</div>
+					</div>
+					<div class="background_size_control">
+						<label>background size width</label><input type="range" id="bsw" value="0" min="38" max="200" />
+						<label>background size height</label><input type="range" id="bsh" value="0" min="39" max="200" />	
+						<div id="background_size_sample">				
+							background-size: 38px 39px;
+						</div>
+					</div>	
+				</div>
+			</section>
+			<!--webkit-gradient-->
+			<section id="webkit_gradient" class="webkit_gradient slide">
+				<h2>background-image: -webkit-gradient</h2>
+				<div class="webkit_gradient_preview">
+					<div id="webkit_gradient_sample" class="webkit_gradient_sample">
+						background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #000), color-stop(1, #FFF));
+					</div>
+					<div class="webkit_gradient_control">
+						<div id="start_color" class="start_color color_control"></div>	
+						<div id="stop_color" class="stop_color color_control">#FFF</div>
+					</div>
+				</div>
+				<div class="external_link">
+					<a href="http://www.colorzilla.com/gradient-editor/">Ultimate CSS Gradient Generator</a>
+				</div>
+			</section>
+			<!--webkit-border-image-->
+			<section id="border_image" class="slide">
+				<h2>-webkit-border-image</h2>
+				<div class="border_image_preview">
+					<div class="border_image_content">
+						<img src="resources/button_orange.hdpi.png" alt="" />
+						<div id="border_image_sample" class="border_image_sample" contenteditable="true">
+							<pre>
+border-width: 10px 10px 10px 10px;
+-webkit-border-image: url(resources/button_orange.hdpi.png) 10 10 10 10 stretch;
+	  				</pre>
+						</div>
+					</div>
+					<div class="border_image_control">
+						<ul>
+							<li>
+								<label>border top</label><input type="range" id="bt" value="10" min="10" max="50" />
+							</li>
+							<li>
+								<label>border right</label><input type="range" id="br" value="10" min="10" max="50" />
+							</li>
+							<li>
+								<label>border bottom</label><input type="range" id="bb" value="10" min="10" max="50" />
+							</li>
+							<li>
+								<label>border left</label><input type="range" id="bl" value="10" min="10" max="50" />
+							</li>
+							<li>
+								<label>Hide pre node border</label><input type="checkbox" id="hb" />
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!--box-sizing-->
+			<section id="box_sizing" class="box_sizing slide">
+				<h2>box-sizing</h2>
+				<div class="no_box_sizing_preview">
+					No Box Sizing: 
+					<pre>
+	border: 10px solid #000;
+	padding: 20px;
+	width: 100%;
+					</pre>
+				</div>
+				<div class="box_sizing_preview">
+					Box Sizing: 
+					<pre>
+	border: 10px solid #000;
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
+					</pre>
+				</div>
+			</section>
+			<!--text-shadow-->
+			<section id="text_shadow" class="slide">
+				<h2>text-shadow</h2>
+				<div class="text_shadow_preview">
+					<div id="text_shadow_sample" class="text_shadow_sample">
+						text-shadow: 5px 5px 5px #FF0000;
+					</div>
+					<div class="border_image_control">
+						<ul>
+							<li>
+								<label>Horizontal Length</label><input type="range" id="hl" value="5" min="-50" max="50" />
+							</li>
+							<li>
+								<label>Vertical Length</label><input type="range" id="vl" value="5" min="-50" max="50" />
+							</li>
+							<li>
+								<label>Blur Radius</label><input type="range" id="blr" value="5" min="0" max="50" />
+							</li>
+							<li>
+								<label>Shadow Color:</label>
+								<div id="shadow_color" class="shadow_color"></div>	
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!--display: table-->
+			<section id="display_table" class="display_table slide">
+				<h2>display: table</h2>
+				<div class="display_table_preview">       
+					<div class="icon"></div>       
+					<div class="subtitle" contenteditable="true">45 Games</div>   
+				</div>
+
+			</section>
+			<!--QA-->
+			<section id="qa" class="slide">
+				<h1>Q&A</h1>
+			</section>
+		</article>
+	</div>
+	<footer>
+		<p>Based on <a href="http://imakewebthings.github.com/deck.js">deck.js</a></p>
+	</footer>
+
+
+	<script src="deck/jquery-1.7.min.js"></script>
+	<script src="deck/core/deck.core.js"></script>
+	<script src="deck/extensions/hash/deck.hash.js"></script>
+	<script src="deck/extensions/menu/deck.menu.js"></script>
+	<script src="deck/extensions/navigation/deck.navigation.js"></script>
+	<script src="deck/extensions/status/deck.status.js"></script>
+	<script src="farbtastic/farbtastic.js"></script>
+	<script src="index.js"></script>
+
+
+	<!-- Initialize the deck. You can put this in an external file if desired. -->
+	<script>
+		$(function() {
+			$.deck('.slide');
+		});
+	</script>
+</body>
+</html>
