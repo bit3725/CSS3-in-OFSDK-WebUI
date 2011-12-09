@@ -1,8 +1,8 @@
 (function($) {
 	$(document).ready(function() {
 		//border-radius
-		var brNode = $("#border_radius_sample");
-		var brNodeStyle = brNode[0].style;
+		var brsNode = $("#border_radius_sample");
+		var brsNodeStyle = brsNode[0].style;
 		var brtlxNode = $("#brtlx");
 		var brtlyNode = $("#brtly");
 		var brtrxNode = $("#brtrx");
@@ -24,11 +24,11 @@
 			var borderBottomRightX = brbrxNode.val();
 			var borderBottomRightY = brbryNode.val();
 			var bottomRight = borderBottomRightX + "px " + borderBottomRightY + "px"
-			brNodeStyle.borderTopLeftRadius = topLeft
-			brNodeStyle.borderTopRightRadius = topRight
-			brNodeStyle.borderBottomLeftRadius = bottomLeft
-			brNodeStyle.borderBottomRightRadius = bottomRight
-			brNode.html("border-top-left-radius: " + topLeft + ";<br />" +
+			brsNodeStyle.borderTopLeftRadius = topLeft
+			brsNodeStyle.borderTopRightRadius = topRight
+			brsNodeStyle.borderBottomLeftRadius = bottomLeft
+			brsNodeStyle.borderBottomRightRadius = bottomRight
+			brsNode.html("border-top-left-radius: " + topLeft + ";<br />" +
 									"border-top-right-radius: " + topRight + ";<br />" +
 									"border-bottom-left-radius: " + bottomLeft + ";<br />" +
 									"border-bottom-right-radius: " + bottomRight + ";");

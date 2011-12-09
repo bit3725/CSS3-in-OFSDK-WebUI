@@ -225,3 +225,6 @@ body > footer > p {
 	padding: 10px;
 	vertical-align: middle;	
 }
+.display_table pre {
+	margin-top: 20px;
+}
